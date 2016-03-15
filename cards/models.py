@@ -25,9 +25,11 @@ class PooCard (Card):
     """ Poo Card class that inherits from the class Card\n
     Initialize a PooCard object with the __init__ method.\n"""
 
+    __kind = 'POO'
+
     def __init__(self, name, damage):
         # Initialize the Card properties
-        Card.__init__(self, name, "POO")
+        Card.__init__(self, name, PooCard.__kind)
         self.damage = damage
 
     def get_damage(self):
